@@ -42,7 +42,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <Link to="/" className={`nav-link ${isActive('/') ? 'text-gold after:w-full' : ''}`}>
               Почетна
             </Link>
@@ -68,7 +68,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-navy hover:text-gold transition-colors"
+            className="lg:hidden text-navy hover:text-gold transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -86,7 +86,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="md:hidden pt-2 pb-4 animate-fade-in">
+          <nav className="lg:hidden pt-2 pb-4 animate-fade-in">
             <div className="bg-beige/70 backdrop-blur-md rounded-lg shadow-sm border border-gold/10 overflow-hidden space-y-1">
               <Link 
                 to="/" 
