@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 45 44% 94%; /* beige background */
+    --foreground: 222 65% 16%; /* navy text */
+
+    --card: 0 0% 100%; /* white */
+    --card-foreground: 222 65% 16%; /* navy text */
+
+    --popover: 0 0% 100%; /* white */
+    --popover-foreground: 222 65% 16%; /* navy text */
+
+    --primary: 219 50% 20%; /* modernized navy */
+    --primary-foreground: 45 44% 94%; /* beige text */
+
+    --secondary: 42 67% 55%; /* gold */
+    --secondary-foreground: 222 65% 16%; /* navy text */
+
+    --muted: 45 30% 90%; /* lighter beige */
+    --muted-foreground: 222 30% 40%; /* lighter navy */
+
+    --accent: 42 67% 55%; /* gold */
+    --accent-foreground: 222 65% 16%; /* navy text */
+
+    --destructive: 0 84.2% 60.2%; /* red */
+    --destructive-foreground: 45 44% 94%; /* beige text */
+
+    --border: 42 38% 65%; /* light gold border */
+    --input: 222 30% 90%; /* light navy input */
+    --ring: 42 67% 55%; /* gold ring */
+
+    --radius: 0.6rem;
+
+    --sidebar-background: 222 65% 16%; /* navy */
+    --sidebar-foreground: 45 44% 94%; /* beige text */
+    --sidebar-primary: 42 67% 55%; /* gold */
+    --sidebar-primary-foreground: 222 65% 16%; /* navy text */
+    --sidebar-accent: 222 50% 25%; /* lighter navy */
+    --sidebar-accent-foreground: 45 44% 94%; /* beige text */
+    --sidebar-border: 222 50% 30%; /* navy border */
+    --sidebar-ring: 42 67% 55%; /* gold ring */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-beige text-foreground antialiased;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+
+  .cyrillic-heading {
+    font-family: 'Amatic SC', serif;
+    @apply font-bold;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm border border-gold/20 rounded-lg shadow-soft transition-all duration-300 hover:shadow-medium;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy hover:bg-navy-light text-beige px-6 py-3 rounded-md transition-all duration-300 font-medium shadow-soft hover:shadow-medium border border-transparent relative overflow-hidden after:content-[''] after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-white after:opacity-0 hover:after:opacity-10 after:transition-opacity;
+  }
+  
+  .btn-secondary {
+    @apply bg-gold hover:bg-gold-light text-navy px-6 py-3 rounded-md transition-all duration-300 font-medium shadow-soft hover:shadow-medium relative overflow-hidden after:content-[''] after:absolute after:h-full after:w-full after:top-0 after:left-0 after:bg-white after:opacity-0 hover:after:opacity-10 after:transition-opacity;
+  }
+  
+  .nav-link {
+    @apply text-navy hover:text-gold transition-all duration-300 font-medium relative px-1 py-0.5;
+    &::after {
+      content: '';
+      @apply absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-gold/80 to-gold transition-all duration-300 rounded-full;
+      transform-origin: left;
+    }
+    &:hover::after {
+      @apply w-full;
+    }
+  }
+  
+  .nav-link-mobile {
+    @apply block py-2 px-4 text-navy hover:bg-navy-light hover:text-beige transition-all duration-200 rounded-md;
+  }
+
+  .section-padding {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8;
+  }
+
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row items-start gap-4 sm:gap-6;
+  }
+
+  .text-responsive {
+    @apply text-base sm:text-lg md:text-xl;
+  }
+
+  .heading-responsive {
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+  }
+}
