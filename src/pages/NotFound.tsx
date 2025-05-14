@@ -16,7 +16,7 @@ const NotFound = () => {
     <div className="min-h-screen flex items-center justify-center bg-beige">
       <div className="text-center px-4 py-16">
         <img 
-          src="/src/assets/logo.png" 
+          src="/logo.png" 
           alt="ПРАВО НА ПРАВДУ лого" 
           className="h-32 mx-auto mb-6" 
         />

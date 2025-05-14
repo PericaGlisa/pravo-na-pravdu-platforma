@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 sm:space-x-4">
               <Link to="/" className="transition-transform duration-300 hover:scale-105">
                 <img 
-                  src="/src/assets/logo.png" 
+                  src="/logo.png" 
                   alt="ПРАВО НА ПРАВДУ лого" 
                   className="h-16 sm:h-18 md:h-20 w-auto brightness-110 filter drop-shadow-[0_0_15px_rgba(255,223,142,0.3)] transition-all duration-300 hover:brightness-125" 
                 />

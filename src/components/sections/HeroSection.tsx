@@ -38,7 +38,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10 flex justify-center">
             <motion.img 
-              src="/src/assets/logo.png" 
+              src="/logo.png" 
               alt="ПРАВО НА ПРАВДУ лого" 
               className="h-40 md:h-52 w-auto drop-shadow-md" 
               style={{ transformOrigin: "center center" }}

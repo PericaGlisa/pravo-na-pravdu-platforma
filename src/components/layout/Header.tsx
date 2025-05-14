@@ -32,7 +32,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-3 sm:py-4">
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="/src/assets/logo.png"
+              src="/logo.png"
               alt="ПРАВО НА ПРАВДУ лого"
               className="h-12 sm:h-14 md:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
