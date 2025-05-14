@@ -22,7 +22,7 @@ const CTASection = () => {
             <Link to="/kontakt" className="btn-primary">
               Контактирајте нас
             </Link>
-            <Link to="/usluge?tab=prijava" className="btn-primary">
+            <Link to="/usluge?tab=report" className="btn-primary">
               Пријавите случај
             </Link>
           </div>
